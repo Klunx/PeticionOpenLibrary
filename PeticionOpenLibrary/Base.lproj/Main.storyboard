@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9527.1" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9525.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PeticionOpenLibrary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anota el ISBN del libro." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yb-oh-2mw">
+                                <rect key="frame" x="20" y="28" width="560" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Zbl-CQ-fDm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ney-iG-7Un">
+                                <rect key="frame" x="20" y="113" width="565" height="404"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="404" id="Ygy-8D-1CI"/>
+                                </constraints>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="TDj-1B-nHK">
+                                <rect key="frame" x="20" y="66" width="565" height="30"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="light" returnKeyType="search"/>
+                                <connections>
+                                    <action selector="buscarValorISBN:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="9fh-Bu-DC3"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.27058824896812439" green="0.7450980544090271" blue="0.90196084976196289" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="ney-iG-7Un" firstAttribute="width" secondItem="8yb-oh-2mw" secondAttribute="width" constant="5" id="479-p6-S3g"/>
+                            <constraint firstItem="8yb-oh-2mw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="De0-l4-Y0M"/>
+                            <constraint firstItem="TDj-1B-nHK" firstAttribute="width" secondItem="8yb-oh-2mw" secondAttribute="width" constant="5" id="GhT-RU-3AR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TDj-1B-nHK" secondAttribute="trailing" constant="-5" id="Iic-Yo-9Pa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ney-iG-7Un" secondAttribute="trailing" constant="-5" id="JZM-pa-Cof"/>
+                            <constraint firstItem="ney-iG-7Un" firstAttribute="leading" secondItem="TDj-1B-nHK" secondAttribute="leading" id="XeC-yp-Ist"/>
+                            <constraint firstItem="ney-iG-7Un" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dmO-Ug-6xv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ney-iG-7Un" secondAttribute="bottom" constant="83" id="gzQ-om-tzX"/>
+                            <constraint firstItem="ney-iG-7Un" firstAttribute="top" secondItem="TDj-1B-nHK" secondAttribute="bottom" constant="17" id="ha3-FP-yqe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8yb-oh-2mw" secondAttribute="trailing" id="haC-ZR-1jP"/>
+                            <constraint firstItem="ney-iG-7Un" firstAttribute="height" secondItem="8yb-oh-2mw" secondAttribute="height" constant="374" id="nMt-Ps-6R5"/>
+                            <constraint firstItem="ney-iG-7Un" firstAttribute="leading" secondItem="8yb-oh-2mw" secondAttribute="leading" id="qMt-EM-XRe"/>
+                            <constraint firstItem="TDj-1B-nHK" firstAttribute="height" secondItem="8yb-oh-2mw" secondAttribute="height" id="sGp-TM-nmB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultadoISBN" destination="ney-iG-7Un" id="482-t2-llT"/>
+                        <outlet property="valorISBN" destination="TDj-1B-nHK" id="h8c-MJ-VET"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="353"/>
+        </scene>
+    </scenes>
+</document>
